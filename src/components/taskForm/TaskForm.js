@@ -14,6 +14,10 @@ const TaskForm = ({ addTask }) => {
         };
 
         addTask(newTask);
+
+        setTimeout(() => {
+            setInput("");
+        }, 50);
     };
 
     const handleChange = (e) => {
@@ -28,6 +32,7 @@ const TaskForm = ({ addTask }) => {
                 type="text"
                 placeholder="escribe una tarea..."
                 name="task-text"
+                value={input}
             />
             <button className="task-btn" type="submit">
                 agregar tarea

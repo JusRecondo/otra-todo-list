@@ -34,7 +34,7 @@ const Tasks = () => {
 
     useLayoutEffect(() => {
         const localStorageTodoList = getItemFromLocalStorage("todo-list");
-        if (localStorageTodoList) {
+        if (localStorageTodoList && localStorageTodoList.length > 0) {
             setTasksList(localStorageTodoList);
         }
     }, []);
