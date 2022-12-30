@@ -1,16 +1,12 @@
-import { useState, useLayoutEffect } from "react";
+import { useLayoutEffect } from "react";
 import "./App.css";
 import ChangeBackground from "./components/changeBackground/ChangeBackground";
-import Tasks from "./components/tasks/Tasks";
-import { checkLang, languages } from "./modules/languages";
-import { getItemFromLocalStorage, changeBodyClass } from "./modules/utilities";
+import TodoList from "./components/todoList/TodoList";
+import { getItemFromLocalStorage, changeBodyClass } from "./lib/utilities";
 
-function App() {
-    /* const [language, setLanguage] = useState("english"); */
-
+const App = ()  =>{
+    
     useLayoutEffect(() => {
-        /* setLanguage(checkLang()); */
-
         const localStorageBg = getItemFromLocalStorage("bg");
         if (localStorageBg) {
             changeBodyClass(localStorageBg);
@@ -23,7 +19,7 @@ function App() {
                 <h1>lista de tareas</h1>
             </header>
             <main>
-                <Tasks />
+                <TodoList />
             </main>
             <footer>
                 <ChangeBackground />

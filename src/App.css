@@ -2,6 +2,7 @@
 
 :root {
   --main-text-color: #363540;
+  --disabled-text-color: rgba(198, 198, 198, 0.5);
   --main-font: 'PT Mono', monospace;
 }
 

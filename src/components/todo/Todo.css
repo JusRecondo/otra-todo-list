@@ -1,4 +1,4 @@
-.task-container {
+.todo-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,24 +11,41 @@
     cursor: pointer;
 }
 
-.task-container.completed {
-    background-color: rgba(198, 198, 198, 0.5);
+.todo-container.completed {
+    background-color: var(--disabled-text-color);
     text-decoration: line-through;
 }
 
-.task-title {
-    overflow-wrap: break-word;
+.todo-container.editing {
+    animation: blink 0.4s infinite alternate;
 }
 
-.task-delete-btn {
+.todo-title {
+    overflow: hidden;
+    overflow-wrap: break-word;
+    width: 100%;
+    font-size: 16px;
+}
+
+.todo-btn {
     background-color: transparent;
     border: none;
     display: flex;
     align-items: center;
+    margin: 0 4px;
 }
 
-.task-icon {
+.todo-icon {
     width: 20px;
     height: 20px;
     cursor: pointer;
+}
+
+@keyframes blink {
+    0% {
+        border-color: var(--main-text-color);
+    }
+    100% {
+        border-color: var(--disabled-text-color);
+    }
 }
