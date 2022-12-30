@@ -6,6 +6,7 @@ const TodoForm = ({ handleSubmit, handleChange, editMode, todoTitle }) => {
     return (
         <form className="todo-form" onSubmit={handleSubmit}>
             <input
+                required
                 onChange={handleChange}
                 className="todo-input"
                 type="text"

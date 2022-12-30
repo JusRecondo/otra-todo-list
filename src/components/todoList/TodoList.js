@@ -41,7 +41,7 @@ const TodoList = () => {
             updateTodo(editMode.id, title);
             setEditMode({ id: null, status: false });
         }
-        setTitle('');
+        setTitle('');        
     }
 
     function handleEdit(todo) {
@@ -56,7 +56,7 @@ const TodoList = () => {
     return (
         <section className="todos-container">
             <h2>tareas</h2>
-            {todos.length &&
+            {todos.length ?
                 todos.map(todo => (
                     <Todo
                         key={todo.id}
@@ -66,7 +66,9 @@ const TodoList = () => {
                         handleEdit={handleEdit}
                         editMode={editMode.id === todo.id}
                     />
-                ))}
+                ))
+            :
+            null }
             <TodoForm
                 handleSubmit={handleSubmit}
                 handleChange={handleChange}
