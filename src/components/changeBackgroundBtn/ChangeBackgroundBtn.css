@@ -2,6 +2,7 @@
     width: 20px;
     height: 20px;
     border: 1px solid var(--main-text-color);
+    border-radius: 50%;
     outline: none;
     cursor: pointer;
 }

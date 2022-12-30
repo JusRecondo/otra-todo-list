@@ -1,5 +1,5 @@
 import React from "react";
-import ChangeBackgroundBtn from "../changeBackgroundBtn.js/ChangeBackgroundBtn";
+import ChangeBackgroundBtn from "../changeBackgroundBtn/ChangeBackgroundBtn";
 import "./ChangeBackground.css";
 import {
     setItemInLocalStorage,

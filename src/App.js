@@ -29,11 +29,11 @@ function App() {
                 <ChangeBackground />
                 <small>
                     <a
-                        href="https://github.com/JusRecondo"
+                        href="https://jusrecondo.web.app/"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        jr
+                        Hecho con 🖤 por jus recondo
                     </a>
                 </small>
             </footer>
